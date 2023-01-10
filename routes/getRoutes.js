@@ -6,6 +6,7 @@ const main = require('../scrapeFn/scrape');
 routes.post('/indeed', async (req, res) => {
     try {
         const { skill } = req.body;
+        // console.log(skill)
         let scrp = await main(skill);
 
         return res.status(200).json({
